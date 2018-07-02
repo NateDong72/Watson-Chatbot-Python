@@ -1,0 +1,33 @@
+<script>
+function setSelectedOption(option_id) {
+	if (option_id.length > 0) {
+		option = document.getElementById(option_id)
+		if (option !== null) {
+			option.selected = "true";
+		}
+	}
+}
+window.onload = function() 
+{
+	setSelectedOption("{{context.Manufacturer}}");
+};
+</script>
+<form action='/form' method='POST'>
+	<em>Please fill out the following information:</em>
+	<p>
+		<span style='width: 120px; display:inline-block;'>Serial Number:</span> <input type='text' name='Serial_Number' value='{{context.Serial_Number}}'/><br>
+		<span style='width: 120px; display:inline-block;'>Model Number:</span> <input type='text' name='Model' value='{{context.Model}}'/><br>
+		<span style='width: 120px; display:inline-block;'>Manufacturer:</span> 
+		<select name='Manufacturer'>
+			<option id='LG'>LG</option>
+			<option id='RCA'>RCA</option>
+			<option id='Samsung'>Samsung</option>
+			<option id='Sony'>Sony</option>
+		</select>
+	</p>
+	<em>Please click 'Done' when you've entered the information.</em>
+	<p>
+		<input type='submit' name='response_input' value='Done'/>
+		<input type='submit' name='response_input' value='Cancel'/>
+	</p>
+</form>

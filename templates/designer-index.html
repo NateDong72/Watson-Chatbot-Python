@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Watson Conversation Demonstration</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+		<link href="/static/stylesheets/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Partner Digitial Concierge...chat with Watson!</h1>
+			</header>	
+			<main class="chat">
+				<div id="chat">
+					{% for post in posts %}
+					<div class='{{post.style}}'>
+						<div class='messages'>
+							<p>{% autoescape false %}{{post.text}}{% endautoescape %}</p>
+							<time datetime='{{post.datetime}}'>{{post.name}} • {{post.datetime}}</time>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<script type="text/javascript">
+					var element = document.getElementById("chat");
+					element.scrollTop = element.scrollHeight;
+				</script>
+				<!-- Additions for TTS & STT -->
+				<p><input id="voice" type="checkbox" /> Use voice</p>
+				<form class="chat--input" action='.' method='POST'>
+					<input autofocus id="response_input" name='response_input' placeholder="Ask IBM a question..."></input>
+					<button name='send-button'>Send</button>
+				</form>
+			</main>
+			<aside>
+				<section class="faq">
+					<h3>Form &#38; FAQ</h3>
+					<div>{% autoescape false %}{% if form != '' %}{% include form %}{% endif %}{% endautoescape %}</div>
+				</section>			
+				<section class="tips">
+					<h3>Tips</h3>
+					<div>{% autoescape false %}{{tips}}{% endautoescape %}</div>
+				</section>
+			</aside>
+			<footer>
+				<p>&#169; 2016 IBM. All rights reserved.</p>
+			</footer>
+		</div>
+		<!-- Additions for TTS & STT -->
+		<div id="what-to-say" style="display:none">{% autoescape false %}{{posts[-1].text}}{% endautoescape %}</div>
+		<script src="/static/scripts/watson-speech.min.js"></script>
+		<script>
+			var ttsToken = "{{tts_token}}";
+			var sttToken = "{{stt_token}}";
+		//	records microphone input to
+			function record() {
+			//	$micButton.addClass('active');
+				return WatsonSpeech.SpeechToText.recognizeMicrophone({
+					token: sttToken,
+				//	automatically stop at first pause
+					continuous: false,
+					outputElement: '#response_input',
+				//	don't add capitalization and periods to the input text
+					format: false
+				//	if using ajax to submit audio, this makes firefox only ask for mic permission once
+				//	keepMicrophone: navigator.userAgent.indexOf('Firefox') > 0
+				})
+				.promise()
+				.then(function() {
+					document.querySelector('form.chat--input').submit();
+				})
+				.catch(console.log);
+			}
+			var audio;
+			function say(text) {
+				if (audio) {
+					audio.pause();
+				}
+				return new Promise(function(resolve, reject){
+					audio = WatsonSpeech.TextToSpeech.synthesize({
+						text: text,
+						token: ttsToken,
+						voice: 'en-US_AllisonVoice'
+					});
+					audio.addEventListener('ended', resolve);
+					audio.addEventListener('error', reject);
+				});
+			}
+		//	control voice with a checkbox, remember it between pageviews
+			var voiceCheckbox = document.querySelector('#voice');
+		//	default to false, switch it to !== 'false' to default it to true
+			voiceCheckbox.checked = localStorage.usevoice === 'true';
+			function initVoice() {
+				if (voiceCheckbox.checked) {
+					say(document.querySelector('#what-to-say').textContent).then(record);
+				} else if (audio) {
+					audio.pause();
+				}
+				localStorage.usevoice = voiceCheckbox.checked;
+			}
+			voiceCheckbox.onclick = initVoice;
+			initVoice();
+		</script>
+		<script type='text/javascript'>
+		//	The following handle client side form validation
+			$(document).ready(function() {
+				console.log('---Document ready---');
+
+			//	Helper function to ensure email is correct format
+				function validateEmail(email) {
+					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+					return emailReg.test(email);
+				}
+			/*	
+				$("button[name='send-button']").prop('disabled',true);
+				$('#response_input').bind('input', function(){
+					$("button[name='send-btton']").prop('disabled', this.value == "" ? true : false);     
+				});
+			*/
+			//	$('#response_input').keyup(function(){
+			//		$("button[name='send-button']").prop('disabled', this.value == "" ? true : false);     
+			//	})
+				
+			//	Form validaton for form
+				$("form[action='/form']").find("input[name='form_input'][value='Done']").click(function(event) {
+					var first_name = $("input[name='first_name']").val();
+					var last_name = $("input[name='last_name']").val();
+					var date_of_birth = $("input[name='date_of_birth']").val();
+					var phone_number = $("input[name='phone_number']").val();
+					var current_address = $("input[name='current_address']").val();
+				//	var email = ($("input[name='Email']")).val();
+
+					var noSubmit = 0;
+					if (first_name == '') {
+						$("span:contains('First Name:')").html('First Name: *cannot be empty').css('color', 'red');
+						noSubmit++;
+					} else {
+						$("span:contains('First Name:')").html('First Name:').css('color', 'black');
+					}
+					if (last_name == '') {
+						$("span:contains('Last Name:')").html('Last Name:    *cannot be empty').css('color', 'red');
+					} else {
+						$("span:contains('Last Name:')").html('Last Name:').css('color', 'black');
+					}
+					if (date_of_birth == '') {
+						$("span:contains('Date of Birth:')").html('Date of Birth:<br>*cannot be empty').css('color', 'red');
+						noSubmit++;
+					} else {
+						$("span:contains('Date of Birth:')").html('Date of Birth:').css('color', 'black');
+					}
+					if (phone_number == '') {
+						$("span:contains('Phone Number:')").html('Phone Number:<br>*cannot be empty').css('color', 'red');
+						noSubmit++;
+					} else {
+						$("span:contains('Phone Number:')").html('Phone Number:').css('color', 'black');
+					}
+					if (current_address == '') {
+						$("span:contains('Current Address:')").html('Current Address:<br>*cannot be empty').css('color', 'red');
+						noSubmit++;
+					} else {
+						$("span:contains('Current Address:')").html('Current Address:').css('color', 'black');
+					}
+				//	if (email == '') {
+				//		$("span:contains('Email:')").html('Email:<br>*cannot be empty').css('color', 'red');
+				//		noSubmit++;
+				//	} else if (!validateEmail(email)) {
+				//		$("span:contains('Email:')").html('Email: *malformed email').css('color', 'red');
+				//		noSubmit++;
+				//	} else {
+				//		$("span:contains('Email:')").html('Email:').css('color', 'black');
+				//	}
+					if (noSubmit) {
+						event.preventDefault();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

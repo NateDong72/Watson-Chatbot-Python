@@ -1,0 +1,181 @@
+<script>
+function setSelectedOption(option_id) {
+	if (option_id.length > 0) {
+		option = document.getElementById(option_id)
+		if (option !== null) {
+			option.selected = "true";
+		}
+	}
+}
+window.onload = function() 
+{
+	setSelectedOption("{{context.ProductName}}");
+	setSelectedOption("{{context.Product_Year}}"); 
+};
+</script>
+<form action='/activate' method='POST' id='right'>
+	<p>
+		<span style='width: 275px; display:inline-block;'>First Name:</span><input type='text' name='First_Name' value='{{context.First_Name}}'/><br>
+		<span style='width: 275px; display:inline-block;'>Last Name:</span><input type='text' name='Last_Name' value='{{context.Last_Name}}'/><br>
+		<span style='width: 275px; display:inline-block;'>Email:</span><input type='text' name='Email' value='{{context.Email}}'/><br>
+		<span style='width: 275px; display:inline-block;'>Phone Number:</span><input type='text' name='Phone_Number' value='{{context.Phone_Number}}'/><br>
+		<span style='width: 275px; display:inline-block;'>Product Name:</span>
+		<select id='ProductName' name='ProductName'>
+			<option id="My Product Is Not Listed ">My Product Is Not Listed </option>
+			<option id="3DS Max">3DS Max</option>
+			<option id="3ds Max with Softimage">3ds Max with Softimage</option>
+			<option id="3ds Max Entertainment Creation Suite Standard">3ds Max Entertainment Creation Suite Standard</option>
+			<option id="Advance Concrete">Advance Concrete</option>
+			<option id="Advance Steel">Advance Steel</option>
+			<option id="Alias AutoStudio">Alias AutoStudio</option>
+			<option id="Alias Concept">Alias Concept</option>
+			<option id="Alias Design">Alias Design</option>
+			<option id="Alias Speedform">Alias Speedform</option>
+			<option id="Alias Surface">Alias Surface</option>
+			<option id="AutoCAD">AutoCAD</option>
+			<option id="AutoCAD Architecture">AutoCAD Architecture</option>
+			<option id="AutoCAD Civil 3D">AutoCAD Civil 3D</option>
+			<option id="AutoCAD Design Suite Premium">AutoCAD Design Suite Premium</option>
+			<option id="AutoCAD Design Suite Standard">AutoCAD Design Suite Standard</option>
+			<option id="AutoCAD Design Suite Ultimate">AutoCAD Design Suite Ultimate</option>
+			<option id="AutoCAD Electrical">AutoCAD Electrical</option>
+			<option id="AutoCAD for Mac">AutoCAD for Mac</option>
+			<option id="AutoCAD Inventor LT Suite">AutoCAD Inventor LT Suite</option>
+			<option id="AutoCAD LT">AutoCAD LT</option>
+			<option id="AutoCAD LT Civil Suite">AutoCAD LT Civil Suite</option>
+			<option id="AutoCAD LT for Mac">AutoCAD LT for Mac</option>
+			<option id="AutoCAD Map 3D">AutoCAD Map 3D</option>
+			<option id="AutoCAD Mechanical">AutoCAD Mechanical</option>
+			<option id="AutoCAD MEP">AutoCAD MEP</option>
+			<option id="AutoCAD P&ID">AutoCAD P&ID</option>
+			<option id="AutoCAD Plant 3D">AutoCAD Plant 3D</option>
+			<option id="AutoCAD Raster Design">AutoCAD Raster Design</option>
+			<option id="AutoCAD Revit LT Suite">AutoCAD Revit LT Suite</option>
+			<option id="AutoCAD Utility Design">AutoCAD Utility Design</option>
+			<option id="AutoCAD with Advance Steel">AutoCAD with Advance Steel</option>
+			<option id="Autodesk AutoCAD LT Civil Suite">Autodesk AutoCAD LT Civil Suite</option>
+			<option id="Autodesk Navisworks Manage">Autodesk Navisworks Manage</option>
+			<option id="Autodesk Navisworks Simulate">Autodesk Navisworks Simulate</option>
+			<option id="Building Design Suite Premium">Building Design Suite Premium</option>
+			<option id="Building Design Suite Standard">Building Design Suite Standard</option>
+			<option id="Building Design Suite Ultimate">Building Design Suite Ultimate</option>
+			<option id="CAD Doctor for Simulation">CAD Doctor for Simulation</option>
+			<option id="CFD">CFD</option>
+			<option id="CFD Advanced">CFD Advanced</option>
+			<option id="CFD Connection for NX">CFD Connection for NX</option>
+			<option id="CFD Connection for Parasolid">CFD Connection for Parasolid</option>
+			<option id="CFD Connection for Pro/ENGINEER">CFD Connection for Pro/ENGINEER</option>
+			<option id="CFD Design Study Environment">CFD Design Study Environment</option>
+			<option id="CFD Motion">CFD Motion</option>
+			<option id="Entertainment Creation Suite Ultimate">Entertainment Creation Suite Ultimate</option>
+			<option id="Entertainment Creation Suite with Softimage">Entertainment Creation Suite with Softimage</option>
+			<option id="Fabrication CADmep">Fabrication CADmep</option>
+			<option id="Fabrication CAMduct">Fabrication CAMduct</option>
+			<option id="Fabrication ESTmep">Fabrication ESTmep</option>
+			<option id="Factory Design Suite Premium">Factory Design Suite Premium</option>
+			<option id="Factory Design Suite Standard">Factory Design Suite Standard</option>
+			<option id="Factory Design Suite Ultimate">Factory Design Suite Ultimate</option>
+			<option id="Geotechnical Module">Geotechnical Module</option>
+			<option id="Helius Composite">Helius Composite</option>
+			<option id="Helius PFA">Helius PFA</option>
+			<option id="Infrastructure Design Suite Premium">Infrastructure Design Suite Premium</option>
+			<option id="Infrastructure Design Suite Standard">Infrastructure Design Suite Standard</option>
+			<option id="Infrastructure Design Suite Ultimate">Infrastructure Design Suite Ultimate</option>
+			<option id="Infrastructure Map Server">Infrastructure Map Server</option>
+			<option id="Infrastructure Map Server 5 Activations">Infrastructure Map Server 5 Activations</option>
+			<option id="InfraWorks 360">InfraWorks 360</option>
+			<option id="Inventor">Inventor</option>
+			<option id="Inventor Engineer-to-Order Series">Inventor Engineer-to-Order Series</option>
+			<option id="Inventor Engineer-to-Order Server">Inventor Engineer-to-Order Server</option>
+			<option id="Inventor HSM">Inventor HSM</option>
+			<option id="Inventor HSM Pro">Inventor HSM Pro</option>
+			<option id="Inventor LT">Inventor LT</option>
+			<option id="Inventor Professional">Inventor Professional</option>
+			<option id="Inventor Publisher">Inventor Publisher</option>
+			<option id="Maya">Maya</option>
+			<option id="Maya Entertainment Creation Suite Standard">Maya Entertainment Creation Suite Standard</option>
+			<option id="Maya LT">Maya LT</option>
+			<option id="Mental Ray standalone">Mental Ray standalone</option>
+			<option id="Moldflow Adviser Premium">Moldflow Adviser Premium</option>
+			<option id="Moldflow Adviser Standard">Moldflow Adviser Standard</option>
+			<option id="Moldflow Adviser Ultimate">Moldflow Adviser Ultimate</option>
+			<option id="Moldflow Design">Moldflow Design</option>
+			<option id="Moldflow Insight Premium">Moldflow Insight Premium</option>
+			<option id="Moldflow Insight Standard">Moldflow Insight Standard</option>
+			<option id="Moldflow Insight Ultimate">Moldflow Insight Ultimate</option>
+			<option id="Moldflow Synergy">Moldflow Synergy</option>
+			<option id="MotionBuilder">MotionBuilder</option>
+			<option id="Mudbox">Mudbox</option>
+			<option id="Nastran">Nastran</option>
+			<option id="Nastran In-CAD">Nastran In-CAD</option>
+			<option id="Navisworks Manage">Navisworks Manage</option>
+			<option id="Navisworks Simulate">Navisworks Simulate</option>
+			<option id="Plant Design Suite Premium">Plant Design Suite Premium</option>
+			<option id="Plant Design Suite Standard">Plant Design Suite Standard</option>
+			<option id="Plant Design Suite Ultimate">Plant Design Suite Ultimate</option>
+			<option id="Point Layout">Point Layout</option>
+			<option id="Product Design Suite Premium">Product Design Suite Premium</option>
+			<option id="Product Design Suite Ultimate">Product Design Suite Ultimate</option>
+			<option id="Revit">Revit</option>
+			<option id="Revit Architecture">Revit Architecture</option>
+			<option id="Revit LT">Revit LT</option>
+			<option id="Revit MEP">Revit MEP</option>
+			<option id="Revit Structure">Revit Structure</option>
+			<option id="River and Flood Analysis Module">River and Flood Analysis Module</option>
+			<option id="Robot Structural Analysis Professional">Robot Structural Analysis Professional</option>
+			<option id="ShowCase">ShowCase</option>
+			<option id="Simulation Mechanical">Simulation Mechanical</option>
+			<option id="SketchBook Pro for Enterprise">SketchBook Pro for Enterprise</option>
+			<option id="Structural Bridge Design">Structural Bridge Design</option>
+			<option id="Studio Wall">Studio Wall</option>
+			<option id="TruComp">TruComp</option>
+			<option id="TruLaser">TruLaser</option>
+			<option id="TruNest Contour">TruNest Contour</option>
+			<option id="TruNest Multi-Tool">TruNest Multi-Tool</option>
+			<option id="Vault Office">Vault Office</option>
+			<option id="Vault Office 2011">Vault Office 2011</option>
+			<option id="Vault Professional">Vault Professional</option>
+			<option id="Vault Workgroup">Vault Workgroup</option>
+			<option id="Vehicle Tracking">Vehicle Tracking</option>
+			<option id="VRED">VRED</option>
+			<option id="VRED Design">VRED Design</option>
+			<option id="VRED Presenter">VRED Presenter</option>
+			<option id="VRED Professional">VRED Professional</option>
+			<option id="VRED Render Node">VRED Render Node</option>
+			<option id="VRED Server">VRED Server</option>
+		</select><br>
+		<span style='width: 275px; display:inline-block;'>Product Year:</span>
+		<select id='Product_Year' name='Product_Year'>
+			<option id="Please Select">Please Select</option>
+			<option id="2017">2017</option>
+			<option id="2016">2016</option>
+			<option id="2015">2015</option>
+			<option id="2014">2014</option>
+			<option id="2013">2013</option>
+			<option id="Other">Other</option>
+		</select><br>
+		<span style='width: 275px; display:inline-block;'>Serial Number:</span><input type='text' name='Serial' value='{{context.Serial}}'/><br>
+		<span style='width: 275px; display:inline-block;'>Request Code:</span><input type='text' name='Request_Code' value='{{context.Request_Code}}'/><br>
+		<span style='width: 275px; display:inline-block;'>Current SC/CM Email:</span><input type='text' name='SCCMEmail' value='{{context.SCCMEmail}}'/><br>
+		<input type='hidden' name='Subject' value='Request_Activation_Code_Otto'/>
+		<input type='hidden' name='Description' value=''/>
+		<input type='hidden' name='Follow_Up_Request' value='true'/>
+		<input type='hidden' name='Case_Status' value='Open-Unassigned'/>
+		<input type='hidden' name='Origin' value='Partner Center'/>
+		<input type='hidden' name='Sub_Origin' value='Otto'/>
+		<input type='hidden' name='Case_Area' value=''/>
+		<input type='hidden' name='Sub_Area' value=''/>
+		<input type='hidden' name='Group' value=''/>
+		<input type='hidden' name='Type' value='Installation, Activation & Registration'/>
+		<input type='hidden' name='Topic' value='Request Activation Code'/>
+		<input type='hidden' name='System_Name' value='VA'/>
+		<input type='hidden' name='Field_Order' value='ProductName, Product_Year, Serial, Request_Code, CurrentSCCMEmail'/>
+		<input type='hidden' name='comments' value='' />
+	</p>
+	<p>
+		<input type='submit' name='response_input' value='Request a code'/>
+		<input type='submit' name='response_input' value='Chat with agent' />
+		<input type='submit' name='response_input' value='Open a case'/>
+		<input type='submit' name='response_input' value='Cancel'/>
+	</p>
+</form>

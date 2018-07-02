@@ -1,0 +1,655 @@
+{
+  "add" : {
+    "doc" : {
+      "id" : 1,
+      "author" : "Run Book 1",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Run book command 1. step to restart. 2. step to go further. 3. the step that clears your disk and resolves problem",
+      "title" : "Disk full resolution .",
+	 "RunBook_URL" : " http://abcdRunbook.com"
+      
+    }
+  },
+  "add" : {
+    "doc" : {
+      "id" : 2,
+      "author" : "DB2 Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "DB2 Power off",
+      "title" : "Power down DB2 steps.",
+	 "RunBook_URL" : " http://abcdRunbook.com"
+      
+    }
+  },
+  "add" : {
+    "doc" : {
+      "id" : 3,
+      "author" : "WAS Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "WAS Power off",
+      "title" : "Power down WAS steps.",
+	 "RunBook_URL" : " http://abcdRunbook.com"
+      
+
+    }
+  },
+   "add" : {
+    "doc" : {
+      "id" : 4,
+      "author" : "DB2 SME",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "1: Check to see if the DB2 Server is on-line and it can be pinged from any machine in the network. 2: Check if CPU Utilization is very high. This can cause slowness in DB2 Server. 3: The db2 query may need optimization. The db2expln tool will allow to find the overhead of the query.  4: Any change introduce such as software update. If yes then back out from the change that was introduced and it may normalize the situation. 5: Contact the DB2 administrator and make sure all the DB2 processes are running",
+      "title" : "The top 5 reasons for DB2 server to be slow and cause login problems. ",
+	"RunBook_URL" : " http://abcdRunbook.com"
+      
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 5,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The WebSphere Integrated Solutions Console, referred to as the administrative console, is a graphical, web-based tool that is used to configure and manage the resources within your WebSphere environment. The administrative console application name is isclite, and it is a system application. This means that the application is central to a WebSphere Application Server product, and it is installed when the product is installed. In this case, the administrative console application is installed during profile creation, if selected, or afterwards using the command line. You do not see system applications in the list of installed applications when using the administrative console. You cannot stop or start the application directly or uninstall the application directly. With the introduction of the flexible management topologies, there are multiple administrative consoles available in a WebSphere solution:",
+      "title" : "Describe or what is WebSphere Administrative Console. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 6,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "There are 3 types of WebSphere Administrative Console.",
+      "title" : "How many types of WebSphere Administrative Console are there. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 7,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "1. Administrative Console. 2. Administrative Agent Console. 3.Job Manager Administrative Console.",
+      "title" : "List the 3 types of WebSphere Administrative Console are there. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 8,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "These ports are assigned at profile creation time. If you do not know which is the port number for the administrative console, look in the following location: In case of a Network Deployment environment: profile_home/properties/portdef.props. In case of a stand-alone environment:profile_home/config/cells/cell_name/nodes/node_name/serverindex.xml",
+      "title" : "How can you find the Administrative Console port numbers. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 9,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "http://<hostname>:<WC_adminhost>/ibm/console",
+      "title" : "What is the url to access the administrative console. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 10,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "You can enable administrative security after profile creation through the WebSphere administrative console.",
+      "title" : "How do you enable security after profile creation. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 11,
+      "author" : "WebSphere Doc",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The following administrative security roles are available: Administrator: The administrator role has operator permissions, configurator permissions, and the permission required to access sensitive data, including server password, Lightweight Third Party Authentication password and keys, and so on. Auditor: The auditor role has permission to view and change the configuration settings for the security auditing subsystem. Configurator: The configurator role has monitor permissions and can change the WebSphere Application Server configuration. Operator: The operator role has monitor permissions and can change the runtime state, for example, the operator can start or stop services. Monitor: The monitor role has the least permissions. This role primarily confines the user to viewing the WebSphere Application Server configuration and current state. Deployer: The deployer role has permission to perform both configuration actions and runtime operations on applications. Admin Security Manager: The Admin Security Manager role gives permissions to users to map other users to administrative roles. When fine-grained administrative security is used, users granted this role can manage authorization groups. A user mapped to the administrator role does not have permissions to map users to administrative roles. ISC Admin: The ISC Admin role has administrator privileges for managing users and groups from within the administrative console only. You can find more information about each of these roles at the following information center website: http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/rsec_adminroles.html",
+      "title" : "Describe the various security roles in WebSphere.  ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 12,
+      "author" : "Wiki and google search",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "It is used for developing server-side applications. It is based on open source, cross platform runtime environment. Javascript is used to develop Node.js applications and it runs on Node.js runtime environment. It can run on multiple variety of platforms such as IBM AIX, IBM system z, IBM i series, Linux, OS X, and more.",
+      "title" : "What is Node.js. ",
+      "RunBook_URL" : " http://www.redbooks.ibm.com/abstracts/sg248056.html?Open&pdfbookmark"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 13,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The following steps outline how to create a Java core using two different ways: Using a command line: 1. Log into the server, which has the application server experiencing the issue. 2. Locate the process ID for the java process of that application server. 3. Issue the command kill -3 PID. Where PID is the process ID of the java process. Using the administration console: 1. From the Web Administration Console, go to Troubleshooting  ->Java dumps and cores. 2. Select the application server you want to create a Java core, and click Java core. By default, the java cores are created in the profile_home directory with the naming convention of javacore.<YEAR><MONTH><DAY>.<TIME>.<PID>.<SEQUENTIAL>.txt, for example: javacore.20120628.171251.5424.0001.txt.",
+      "title" : "How can I create a Java core file in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 14,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "It is important that you create a few Java cores in regular intervals to be able to detect if a thread is still hung or not. By comparing the java core files and matching with warning messages in the logs, you can detect if a thread is still hung or not and what is the likely cause. Diagnosing hung thread issues To diagnose hung thread issues: 1. After a thread is detected hung or if you suspect that something is hung, the first step is to immediately take java cores as described in the section “Creating Java cores”. The minimum number of java cores recommended to take is 3 with an interval of 2 minutes from each other. 2. Identify from the SystemOut.log file, what thread is reported as hung. 3. Download the java core files to a computer with IBM Support Assistance installed. Make sure you have the IBM Thread and Monitor Dump Analyzer for Java installed in ISA. 4. From ISA, Click Launch Activity -> Analyze problem 5. In the Tools Catalog, select IBM Thread and Monitor Dump Analyzer for Java. 6. In TMDA, open the Java core files by clicking File  Open Thread Dumps. 7. Select the Java core file, and click Open. 8. Select the Java core file from the list, and click the Thread Detail icon. 9. From the list of threads, select the thread identified as hung from step 2 on page 1104. On the right side of the window, you will see the thread details. 10. You can see the stack trace of the hung thread and identify what is the component causing it.",
+      "title" : "How should I debug a hung thread in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 15,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The high CPU usage analysis is done by identifying what thread or threads are consuming most of the CPU time and then correlating those threads to the Java code they were executing. By doing this, you can pin point what parts of the code are consuming the CPU.",
+      "title" : "How can I perform high CPU analysis in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 16,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "High CPU usages can also be caused by excessive execution of the Java garbage collector,most likely because it needs tuning in the algorithm used or in the JVM memory size.",
+      "title" : "What causes high CPU usage in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 17,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "A memory leak can be indicated by the steady increase in the memory usage without de-allocation. Another type of out of memory issue can be caused by heap fragmentation. Heap fragmentation is caused by the allocation and de-allocation of large objects in a short amount of time. The heap will have enough space to accommodate new large objects, but that space is not contiguous, causing an Out of Memory exception. In such cases, a steady increase pattern is not seen in the chart, so then the analysis tools will help in determining if heap fragmentation is the problem.",
+      "title" : "How can I know if a memory leak is occurring in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 18,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "An out of memory condition is most commonly detected when an Out Of Memory exception is shown in the SystemErr.log.",
+      "title" : "Where can I find out of memory message in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 19,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "After an Out Of Memory exception is detected, WebSphere Application Server by default creates three log files. The files are one Java Core, one Portable Heap Dump or simply Heap dump and one System Dump, as shown in the native_stderr.log.",
+      "title" : "What log files are created by WebSphere when out of OOM happens. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 20,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The System Dump file .dmp is only needed in case the Out Of Memory exception is being caused by something outside the Java Heap, such as the JVM itself of native libraries.",
+      "title" : "At which OOM situation I should use System Dump file file.  ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 21,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Check the SystemOut.log and SystemErr.log file for startup issues and any JDK incompatibility issues.",
+      "title" : "What to do for WebSphere bundle start up issue.  ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 22,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "It happens because of one of the following issues: HTTP Port Mismatch with Application Server Access Port, incorrect context path, Incorrect Virtual Host Configured in WebSphere Application Server.",
+      "title" : "How do I debug --- Cannot Access Agent Console. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 23,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The hang detection option for WebSphere Application Server is turned on by default. You can configure a hang detection policy to accommodate your applications and environment so that potential hangs can be reported. This provides earlier detection of failing servers. When a hung thread is detected, WebSphere Application Server notifies you so that you can troubleshoot the problem.",
+      "title" : "Can WebSphere detect hung threads. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 24,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "A common error in Java Platform, Enterprise Edition applications is a hung thread. A hung thread can result from a simple software defect, such as an infinite loop, or a more complex cause, such as a resource deadlock. System resources, such as CPU time, might be consumed by this hung transaction when threads run unbounded code paths, such as when the code is running in an infinite loop. Alternately, a system can become unresponsive even though all resources are idle, as in a deadlock scenario. Unless a user or a monitoring tool reports the problem, the system might remain in this degraded state indefinitely.",
+      "title" : "What damage is done by hung thread in WebSphere. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 25,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "High Performance Extensible Logging is a log and trace facility that is provided as a part of WebSphere Application Server V8.5. HPEL provides a convenient mechanism for storing and accessing og, trace, System.err, and System.out information produced by the application server or your applications. It is an alternative to the basic log and trace facility, which provided the JVM logs, diagnostic trace, and service log files commonly named SystemOut.log/SystemErr.log, trace.log, and activity.log. HPEL provides a log data repository, a trace data repository, and a text log file.",
+      "title" : "Describe WebSphere HPEL.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 26,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Two modes of logging and tracing exist in WebSphere Application Server V8.5: 1. Basic mode The default mode, is the existing log and trace framework from prior releases of WebSphere Application Server. 2. High Performance Extensible Logging (HPEL) mode.",
+       "title" : "Describe the various logging modes in WebSphere.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 27,
+      "author" : "WAS DOC",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The centralized installation manager can reduce the number of steps that are required to install and maintain the WebSphere Application Server environment.",
+       "title" : "What is the advantage of using installation manager. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 28,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "It is used for developing server-side applications. It is based on open source, cross platform runtime environment. Javascript is used to develop Node.js applications and it runs on Node.js runtime environment. It can run on multiple variety of platforms such as IBM AIX, IBM system z, IBM i series, Linux, OS X, and more.",
+       "title" : "What is Node.js. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 29,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "It is based on event-driven architecture with non-blocking I/O API. The I/O API is designed to optimize the application’s throughput and scalability for real time web applications.",
+       "title" : "What is the architecture type of Node.js. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 30,
+      "author" : "https://en.wikipedia.org/wiki/Node.js ",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Google V8 JavaScript engine is used to execute code.",
+       "title" : "What is the engine used to execute Node.js. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 31,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Yes it contains built in library.",
+       "title" : "Does the Node.js have any built in library.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 32,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "It allows Node.js based applications to behave like an individual stand-alone web server.",
+       "title" : "What is the function of Node.js built in library.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 33,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "IBM, Microsoft, Yahoo, Groupon, SAP, LinkedIn, Paypal, GoDaddy, Voxer, Netflix, and more.",
+       "title" : "Name few companies that use Node.js.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 34,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Ryan Dahl invented Node.js in 2009.",
+       "title" : "Who and when Node.js was invented.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 35,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js allows the creation of web servers and networking tools using JavaScript and a collection of modules that handle various core functionality. Modules handle file system I/O, networking, binary data buffers, cryptography functions, data streams and other core functions. Node's modules use an API designed to reduce the complexity of writing server applications.",
+       "title" : "Give me a short overview of Node.js.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 36,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Frameworks can be used to accelerate the development of applications, and common frameworks are xpress.js, Socket.IO and Connect. Node.js applications can run on Microsoft Windows, Unix, NonStop and Mac OS X servers. Node.js applications can alternatively be written with CoffeeScript an alternative form of JavaScript, Dart or Microsoft TypeScript, or any other language that can compile to JavaScript.",
+       "title" : "What is the relationship between Framework and Node.js.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 37,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js is primarily used to build network programs such as web servers, making it similar to PHP.",
+       "title" : "What is built by Node.js.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 38,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Functions in Node.js are designed to post long lasting tasks to the underlying thread pool and then return to the caller in a non-blocking fashion. Most functions in PHP block until completion",
+       "title" : "What is the difference between Node.js and PHP. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 39,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Execution of parallel tasks in Node.js is handled by a thread pool. The main thread call functions that post tasks to the shared task queue which threads in the thread pool pull and execute. Inherently non-blocking system functions like networking translates to kernel side non-blocking sockets, while inherently blocking system functions like file I/O run in a blocking way on its own thread. When a thread in the thread pool completes a task it informs the main thread of this, which in turn wakes up and execute the registered callback. Since callbacks are handled in serial on the main thread, long lasting computations and other CPU-bound tasks will freeze the entire event-loop until completion.",
+       "title" : "How does Node.js handle parallel threads. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 40,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Thousands of open-source libraries have been built for Node.js, most of which are hosted on the npm website.",
+       "title" : "Are there many open-source libraries for Node.js. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 41,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js operates on a single thread, using non-blocking I/O calls, allowing it to support tens of thousands of concurrent connections without incurring the cost of thread context switching. The design of sharing a single thread between all the requests is intended for building highly concurrent applications, where any function performing I/O must use a callback. In order to accommodate the single-threaded event loop, Node.js utilizes the libuv library which in turn uses a fixed-sized threadpool that is responsible for all non-blocking asynchronous I/O operations. A downside of this single-threaded approach is that Node.js doesn't allow horizontal scaling by increasing the number of CPU cores of the machine it is running on without using an additional module, such as cluster, StrongLoop Process Manager or pm2. However, developers can increase the defaultnumber of threads in the libuv threadpool; these threads are likely to be distributed across multiple cores by the server operating system.",
+       "title" : "Describe the Node.js threading. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 42,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js uses libuv to handle asynchronous events. Libuv is an abstraction layer for network and file system functionality on both Windows and POSIX-based systems like Linux, Mac OS X, OSS on NonStop and Unix.",
+       "title" : "How does Node.js handle asynchronous events.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 43,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The core functionality of Node.js resides in a JavaScript library. The Node.js bindings, written in C++, connect these technologies to each other and to the operating system.",
+       "title" : "Where does the core functionality of Node.js reside. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 44,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "npm is the pre-installed package manager for the Node.js server platform. It is used to install Node.js programs from the npm registry, organizing the installation and management of third-party Node.js programs. It is not used to load code instead, it is used to install code and manage code dependencies from the command line. The packages found in the npm registry can range from simple helper libraries like Underscore.js to task runners like Grunt.",
+       "title" : "Describe the package management is Node.js. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 45,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js can be combined with a browser, a document database such as MongoDB or CouchDB, and JSON for a unified JavaScript development stack. With the adaptation of what were essentially server-side development patterns like MVC, MVP, MVVM, etc.",
+       "title" : "Can Node.js leverage unified API. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 46,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js allows the reuse of the same model and service interface between client-side and server-side.",
+       "title" : "Can Node.js reuse models and service interface. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 47,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Node.js registers itself with the operating system so that it is notified when a connection is made, and the operating system will issue a callback. Within the Node.js runtime, each connection is a small heap allocation. Traditionally, relatively heavyweight OS processes or threads handled each connection. Node.js uses an event loop for scalability, instead of processes or threads. In contrast to other event-driven servers, Node.js event loop does not need to be called explicitly. Instead callbacks are defined, and the server automatically enters the event loop at the end of the callback definition. Node.js exits the event loop when there are no further callbacks to be performed.",
+       "title" : "How is Node.js notified when a connection is made. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 48,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Reinstall it with “curl -L https://www.npmjs.org/install.sh | sh” command",
+       "title" : "How a broken npm is fixed.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 49,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Reinstall git.",
+       "title" : "How do I fix ---- npm ERR! not found: git  error.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 50,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "A. Possible temporary npm registry glitch, or corrupted local server cache. Run npm cache clean and/or try again later. B. This can be caused by corporate proxies that give HTML responses to package.json requests. Check npm's proxy configuration. C.Check that it's not a problem with a package you're trying to install.",
+       "title" : "How do I fix Invalid JSON error.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 51,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Update npm to the latest level.",
+       "title" : "If I see ENOENT lstat, ENOENT chmod, ENOTEMPTY unlink, or something similar in the log files then what do I do.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 52,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Sometimes npm login fails for no obvious reason. The first thing to do is to log in at npmjs website login and check that your email address on npmjs website matches the email address you are giving to npm login.",
+       "title" : "Why login errors happen.",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 53,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Check if you have two temp directories set in your .npmrc: The command is ?  npm config ls –l. Look for lines defining the tmp config variable. If you find more than one, remove all but one of them.",
+       "title" : "Why npm hangs on Windows at addRemoteTarball. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 54,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "These strange npm issues can be resolved by running “npm cache clean” command.",
+       "title" : "I am having strange npm issues. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 55,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "Use the –verbose option",
+       "title" : "How can I get more detail information for a problematic npm installation. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 56,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "This problem will happen if you're running Node 0.6. Please upgrade to node 0.8 or above.",
+       "title" : "Why SSL error code of  -- npm ERR! Error: SSL Error: CERT_UNTRUSTED -- happens. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 57,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "You can download it from https://nodejs.org/download",
+       "title" : "From where can I download the latest Node.js msi for Windows. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 58,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : "The common mistakes Node.js JavaScript make are Incorrect reference in the code, not avoiding block level scope, creating memory leaks, equaility confusion, inefficient DOM manipulation, incorrect use of function definitions inside for loops, failure to properly leverage prototypal inheritance, creating incorrect references to instance methods, providing a string as the first argument to setTimeout or setInterval, failure to use strict mode.",
+       "title" : "What are common mistakes that JavaScript developers for Node.js make which causes performance overhead. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+"add" : {
+    "doc" : {
+      "id" : 59,
+      "author" : "https://en.wikipedia.org/wiki/Node.js",
+      "bibliography" : "j. ae. scs. 25, 1958, 324.",
+      "body" : " Below are the top reasons for wireless network performance problems 1. Wireless Connections Never Achieve the Advertised Speeds. 2. Bandwidth and Signal Strength Decrease with Distance and Obstructions. 3. In-Channel and Co-Channel Interference. 4. Bandwidth is Throttled and Shared Among all Connected Devices.",
+       "title" : "What are top reasons of wireless network performnce problems. ",
+      "RunBook_URL" : " http://abcdRunbook.com"
+
+    }
+  },
+  "commit" : { }
+}

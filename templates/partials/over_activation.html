@@ -1,0 +1,31 @@
+<script>
+function setSelectedOption(option_id) {
+	if (option_id.length > 0) {
+		option = document.getElementById(option_id)
+		if (option !== null) {
+			option.selected = "true";
+		}
+	}
+}
+window.onload = function() 
+{
+	setSelectedOption("{{context.Overactivation_Reason}}");
+};
+</script>
+<form action='/over_activate' method='POST'>
+	<em>Please select from the specified options:</em>
+	<p>
+		<span style='width: 180px; display:inline-block;'>Overactivation Reason:</span> 
+		<select name='Overactivation_Reason'>
+			<option id='New Computer'>New Computer</option>
+			<option id='Computer Stolen'>Computer Stolen</option>
+			<option id='Software Reinstalled'>Software Reinstalled</option>
+			<option id='Other'>Other</option>
+		</select>
+	</p>
+	<em>Please click 'Done' when you've entered the information.</em>
+	<p>
+		<input type='submit' name='response_input' value='Done'/>
+		<input type='submit' name='response_input' value='Cancel'/>
+	</p>
+</form>

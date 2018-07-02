@@ -1,0 +1,7 @@
+requests
+Flask==0.10.1
+watson_developer_cloud
+beaker
+xmltodict
+langdetect==1.0.7
+translate==2.0.0
