@@ -1,4 +1,4 @@
-# Watson Conversation Demo Framework (an orchestration engine Watson Developer Cloud services and exeternal services)
+# Watson Conversation Demo Framework (an orchestration engine Watson Developer Cloud services and external services)
 
 ## Create demos with automated conversation
 This demo framework leverages the **Conversation**, **Retrieve and Rank**, ""Text to Speech**, **Speech to Text** and **Predictive Analytics** services. Powered by Watson, these services allow for a personalized experience in which users can engage in natural, human-like conversations with the chat engine.
